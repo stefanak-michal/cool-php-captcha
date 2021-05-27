@@ -403,10 +403,10 @@ class SimpleCaptcha
     protected function WriteImage()
     {
         if ($this->imageFormat == 'png' && function_exists('imagepng')) {
-            header("Content-type: image/png");
+            header("Content-Type: image/png");
             imagepng($this->im);
         } else {
-            header("Content-type: image/jpeg");
+            header("Content-Type: image/jpeg");
             imagejpeg($this->im, null, 80);
         }
     }
